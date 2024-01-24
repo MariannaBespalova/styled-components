@@ -19,7 +19,10 @@ function App() {
         <StyledBtn as={Link}>Styled link</StyledBtn>
         <StyledBtn as="a" href={"#"}>Hello</StyledBtn>
         <StyledBtn>Hello</StyledBtn>
+        <StyledBtn color={"red"} fontSize={"20px"}>Hello</StyledBtn>
         <SuperButton>Super Button</SuperButton>
+        <StyledBtn btnType={"outlined"} active>Outlined</StyledBtn>
+        <StyledBtn btnType={"primary"}>Primary</StyledBtn>
       </Box>
     </div>
   );
