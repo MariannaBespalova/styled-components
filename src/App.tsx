@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {StyledBtn, SuperButton} from "./components/Button";
 import {Link} from "./components/Link";
 import {Menu} from "./components/Menu";
+import {myTheme} from "./styles/Theme.styled";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
         <StyledBtn>Hello</StyledBtn>
         <StyledBtn color={"red"} fontSize={"20px"}>Hello</StyledBtn>
         <SuperButton>Super Button</SuperButton>
-        <StyledBtn btnType={"outlined"} active>Outlined</StyledBtn>
-        <StyledBtn btnType={"primary"}>Primary</StyledBtn>
+        <StyledBtn color={myTheme.colors.secondary} btnType={"outlined"} active>Outlined</StyledBtn>
+        <StyledBtn color={myTheme.colors.primary} btnType={"primary"}>Primary</StyledBtn>
       </Box>
     </div>
   );
@@ -43,7 +44,7 @@ const Box = styled.div`
     cursor: zoom-in;
   }
 
-  @media screen and (max-width: 800px) {
+  @media ${myTheme.media.tablet} {
     flex-direction: column;
   }
 `
